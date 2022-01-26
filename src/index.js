@@ -31,7 +31,7 @@ window
         imagen.src = `${baseUrl}${item.image}`;
         //craer titulo
          const title = document.createElement('h2');
-         title.className = "text-lg";
+         title.className = "text-lg text-pink-800 hover:text-blue-300";
          title.textContent = item.name;
          
          //crear precio
@@ -47,22 +47,11 @@ window
 
           //unir imagen con priceAndTitle 
           const card = document.createElement('div');
-          card.className = "md:flex bg-white rounded-lg p-6 hover:big-gray-300";
+          card.className = "md:flex bg-white rounded-lg p-6";
           card.appendChild(imagen);
           card.appendChild(priceAndTitle);
 
-         
-         
-        
-
-        
-       
-        
-
-        const container = document.createElement("div");
-        container.append(imagen, title, price);
-
-        todosLosItems.push(container);
+         todosLosItems.push(card);
  
     });
     appNode.append(...todosLosItems);
