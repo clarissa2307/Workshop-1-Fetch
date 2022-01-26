@@ -27,16 +27,16 @@ window
     responseJson.data.forEach((item) => {
         //crear imagen
         const imagen = document.createElement('img');
-        imagen.className = "h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto md:mx-0 md:mr-6";
+        imagen.className = "h-25 w-25 md:h-25 md:w-25 rounded-full mx-auto md:mx-0 md:mr-6";
         imagen.src = `${baseUrl}${item.image}`;
         //craer titulo
          const title = document.createElement('h2');
-         title.className = "text-lg text-pink-800 hover:text-blue-300";
+         title.className = "text-lg text-pink-800 hover:text-blue-300 text-2xl";
          title.textContent = item.name;
          
          //crear precio
          const price = document.createElement("div");
-         price.className = "text-gray-600";
+         price.className = "text-gray-600 text-xl";
          price.textContent = formatPrice(item.price);
          
           //unir price y title
